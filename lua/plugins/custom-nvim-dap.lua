@@ -1,0 +1,66 @@
+return {
+  -- { "williamboman/mason.nvim" },
+  -- { "mfussenegger/nvim-dap" },
+  -- {
+  --   "jay-babu/mason-nvim-dap.nvim",
+  --   opts = {
+  --     handlers = {
+  --       python = function()
+  --         local dap = require "dap"
+  --         dap.adapters.python = {
+  --           type = "executable",
+  --           command = "/home/justme/.virtualenvs/vim/bin/python3",
+  --           args = {
+  --             "-m",
+  --             "debugpy.adapter",
+  --           },
+  --         }
+  --
+  --         dap.configurations.python = {
+  --           {
+  --             type = "python",
+  --             request = "launch",
+  --             name = "Launch file Python",
+  --             program = "${file}", -- This configuration will launch the current file if used.
+  --           },
+  --         }
+  --       end,
+  --       delve = function()
+  --         local dap = require "dap"
+  --         dap.adapters.delve = {
+  --           type = "server",
+  --           port = "${port}",
+  --           executable = {
+  --             command = "dlv",
+  --             args = { "dap", "-l", "127.0.0.1:${port}" },
+  --           },
+  --         }
+  --
+  --         dap.configurations.go = {
+  --           {
+  --             type = "delve",
+  --             name = "Debug File Go",
+  --             request = "launch",
+  --             program = "${file}",
+  --           },
+  --           {
+  --             type = "delve",
+  --             name = "Debug test Go", -- configuration for debugging test files
+  --             request = "launch",
+  --             mode = "test",
+  --             program = "${file}",
+  --           },
+  --           -- works with go.mod packages and sub packages
+  --           {
+  --             type = "delve",
+  --             name = "Debug test (go.mod)",
+  --             request = "launch",
+  --             mode = "test",
+  --             program = "./${relativeFileDirname}",
+  --           },
+  --         }
+  --       end,
+  --     },
+  --   },
+  -- },
+}
